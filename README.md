@@ -2,7 +2,7 @@
 
 ###
 
-<p align="center">A funtime developer</p>
+<p align="center">I tell computers to do stuff. Sometimes it works</p>
 
 ###
 
