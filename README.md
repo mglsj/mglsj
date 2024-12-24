@@ -1,6 +1,6 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
-  <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="192" align="right" />
+  <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="192" align="left" />
 </picture>
 
 ### I'm Lakshyajeet Jalal
