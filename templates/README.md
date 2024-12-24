@@ -1,9 +1,11 @@
-### I'm Lakshyajeet Jalal
+<h3 align="center">
+  I'm Lakshyajeet Jalal
+</h3>
 
 <div>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
-    <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="__LANGUAGE_CHART_WIDTH__" align="right" />
+    <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="__LANGUAGE_CHART_WIDTH__" align="left" />
   </picture>
 
   I tell computers to do stuff.
