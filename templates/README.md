@@ -1,13 +1,12 @@
+### I'm Lakshyajeet Jalal
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
   <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="__LANGUAGE_CHART_WIDTH__" align="left" />
 </picture>
 
-### I'm Lakshyajeet Jalal
-
-I tell computers to do stuff. Sometimes they listen
-
-<br />
+I tell computers to do stuff.\
+Sometimes they listen
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
