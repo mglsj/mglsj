@@ -5,7 +5,7 @@
 <div>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
-    <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="192" align="left" />
+    <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="240" align="left" />
   </picture>
 
   I tell computers to do stuff.
