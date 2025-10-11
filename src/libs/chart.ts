@@ -20,6 +20,11 @@ export async function getStatsChartData({ gitHub }: Stats, theme: Theme) {
 		(contribution) => contribution.count,
 	);
 
+	const dataMax = gitHubContributions.length ? Math.max(...gitHubContributions) : 0;
+
+	const paddedMax = Math.max(1, Math.ceil(dataMax * 1.1));
+	const yMax = paddedMax;
+
 	chart.setConfig({
 		data: {
 			datasets: [
@@ -65,7 +70,7 @@ export async function getStatsChartData({ gitHub }: Stats, theme: Theme) {
 						drawTicks: false,
 					},
 					min: 0,
-					max: 1000,
+					max: yMax,
 					position: "left",
 					ticks: {
 						callback: (val, index) => {
