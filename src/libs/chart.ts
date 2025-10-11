@@ -10,8 +10,8 @@ import type { GitHubLanguages, GitHubContributions } from "./github";
 export async function getStatsChartData({ gitHub }: Stats, theme: Theme) {
 	const chart = getNewChart(
 		CONFIG.charts.stats.width -
-			CONFIG.charts.stats.legend.width -
-			CONFIG.charts.stats.wrapperBorder * 2,
+		CONFIG.charts.stats.legend.width -
+		CONFIG.charts.stats.wrapperBorder * 2,
 		CONFIG.charts.stats.height - CONFIG.charts.stats.wrapperBorder * 2,
 		theme.background,
 	);
@@ -66,7 +66,6 @@ export async function getStatsChartData({ gitHub }: Stats, theme: Theme) {
 				yContributionAxis: {
 					grid: {
 						color: theme.separator,
-						drawBorder: false,
 						drawTicks: false,
 					},
 					min: 0,
@@ -77,8 +76,8 @@ export async function getStatsChartData({ gitHub }: Stats, theme: Theme) {
 							return index === 0
 								? ""
 								: Intl.NumberFormat("en", { notation: "compact" }).format(
-										Number(val),
-									);
+									Number(val),
+								);
 						},
 						color: theme.tick,
 						count: CONFIG.charts.stats.yAxis.tickCount,
@@ -91,7 +90,7 @@ export async function getStatsChartData({ gitHub }: Stats, theme: Theme) {
 				yDownloadAxis: {
 					grid: {
 						color: theme.separator,
-						drawBorder: false,
+
 						drawTicks: false,
 					},
 					min: 0,
@@ -101,8 +100,8 @@ export async function getStatsChartData({ gitHub }: Stats, theme: Theme) {
 							return index === 0
 								? ""
 								: Intl.NumberFormat("en", { notation: "compact" }).format(
-										Number(val),
-									);
+									Number(val),
+								);
 						},
 						color: theme.tick,
 						count: CONFIG.charts.stats.yAxis.tickCount,
@@ -125,8 +124,8 @@ export async function getLanguagesChartData(
 	theme: Theme,
 ) {
 	const chart = getNewChart(
-		CONFIG.charts.languages.width - CONFIG.charts.stats.wrapperBorder * 2,
-		CONFIG.charts.languages.height - CONFIG.charts.stats.wrapperBorder * 2,
+		CONFIG.charts.languages.width - CONFIG.charts.languages.wrapperBorder * 2,
+		CONFIG.charts.languages.height - CONFIG.charts.languages.wrapperBorder * 2,
 		theme.background,
 	);
 
@@ -147,7 +146,7 @@ export async function getLanguagesChartData(
 					data: distribution,
 				},
 			],
-			labels: languages.map((language) => language),
+			labels: languages.map((language) => language[0]),
 		},
 		options: {
 			plugins: {
@@ -202,21 +201,23 @@ function getLanguagesColors(languages: GitHubLanguages, theme: Theme) {
 	};
 	let unknownColorsCount = 0;
 
+	const unknownList = Array.isArray(theme.languages?.unknown)
+		? theme.languages.unknown
+		: [];
+
 	for (const [name] of languages) {
 		let baseColor: string;
 
 		if (isKnownLanguage(name, theme)) {
 			baseColor = theme.languages.known[name];
 		} else {
-			const unknownBaseColor = theme.languages.unknown[unknownColorsCount];
+			let unknownBaseColor: string | undefined;
 
-			if (!unknownBaseColor) {
-				throw new Error(
-					`Missing color (or fallback color) for unknown language '${name}'.`,
-				);
+			if (unknownList.length > 0) {
+				unknownBaseColor = unknownList[unknownColorsCount % unknownList.length];
 			}
 
-			baseColor = unknownBaseColor;
+			baseColor = unknownBaseColor ?? "#999999";
 			unknownColorsCount++;
 		}
 
