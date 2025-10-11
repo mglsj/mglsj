@@ -16,6 +16,7 @@
   #[PCMR](https://pcmasterrace.org/) #[OpenSource](https://en.wikipedia.org/wiki/Open_source)
 </div>
 <br/>
+<br/>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
   <img alt="mglsj's GitHub contributions" src="assets/stats-light.svg" />
