@@ -67,7 +67,7 @@ export const CONFIG = {
 			},
 			limit: 10,
 			offset: 10,
-			width: 96,
+			width: 80,
 			wrapperBorder: 1,
 		},
 		stats: {

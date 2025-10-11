@@ -12,6 +12,10 @@ export function generateReadme() {
 				CONFIG.charts.languages.legend.width +
 				CONFIG.charts.languages.legend.margin.x +
 				CONFIG.charts.languages.wrapperBorder * 2,
+			LANGUAGE_CHART_HEIGHT:
+				CONFIG.charts.languages.height +
+				CONFIG.charts.languages.offset * 2 +
+				CONFIG.charts.languages.wrapperBorder,
 		},
 		".",
 	);
