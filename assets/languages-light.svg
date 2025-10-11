@@ -29,15 +29,15 @@
   <rect class="wrapper" x="0.5" y="0.5" width="185" height="113" rx="6" />
   <line x1="59" y1="0" x2="59" y2="100%" stroke="#d0d7de" />
   <text class="legend" x="73" y="11">
-    <tspan class="language1" x="__LEGEND_X__" dy="__LEGEND_Y__">C</tspan>
-<tspan class="language2" x="__LEGEND_X__" dy="1.6em">Jupyter Notebook</tspan>
-<tspan class="language3" x="__LEGEND_X__" dy="1.6em">JavaScript</tspan>
-<tspan class="language4" x="__LEGEND_X__" dy="1.6em">Fluent</tspan>
-<tspan class="language5" x="__LEGEND_X__" dy="1.6em">MDX</tspan>
-<tspan class="language6" x="__LEGEND_X__" dy="1.6em">TypeScript</tspan>
-<tspan class="language7" x="__LEGEND_X__" dy="1.6em">Astro</tspan>
-<tspan class="language8" x="__LEGEND_X__" dy="1.6em">Svelte</tspan>
-<tspan class="language9" x="__LEGEND_X__" dy="1.6em">Stylus</tspan>
-<tspan class="language10" x="__LEGEND_X__" dy="1.6em">CSS</tspan>
+    <tspan class="language1" x="73" dy="11">C</tspan>
+<tspan class="language2" x="73" dy="1.6em">Jupyter Notebook</tspan>
+<tspan class="language3" x="73" dy="1.6em">JavaScript</tspan>
+<tspan class="language4" x="73" dy="1.6em">Fluent</tspan>
+<tspan class="language5" x="73" dy="1.6em">MDX</tspan>
+<tspan class="language6" x="73" dy="1.6em">TypeScript</tspan>
+<tspan class="language7" x="73" dy="1.6em">Astro</tspan>
+<tspan class="language8" x="73" dy="1.6em">Svelte</tspan>
+<tspan class="language9" x="73" dy="1.6em">Stylus</tspan>
+<tspan class="language10" x="73" dy="1.6em">CSS</tspan>
   </text>
 </svg>
