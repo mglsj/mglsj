@@ -1,9 +1,7 @@
 import type { ChartDataset } from "chart.js";
 import { format } from "date-fns";
 import QuickChart from "quickchart-js";
-
 import { CONFIG, type Theme } from "../config";
-
 import { getLanguagesChartColors, getStatsChartColors } from "./color";
 import type { GitHubLanguages, GitHubContributions } from "./github";
 

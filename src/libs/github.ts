@@ -7,7 +7,6 @@ import {
 	subDays,
 	subMonths,
 } from "date-fns";
-import fetch, { type BodyInit } from "node-fetch";
 
 import { CONFIG } from "../config";
 
