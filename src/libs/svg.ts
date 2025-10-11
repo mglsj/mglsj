@@ -95,8 +95,6 @@ export async function generateLanguagesChart(languages: GitHubLanguages) {
 				CHART_WIDTH:
 					CONFIG.charts.languages.width -
 					CONFIG.charts.languages.wrapperBorder * 2,
-				LEGEND_STYLES: legendStyles,
-				LEGEND_TSPANS: legendTspans,
 				LEGEND_SEPARATOR_X:
 					CONFIG.charts.languages.width +
 					CONFIG.charts.languages.wrapperBorder +
@@ -125,6 +123,8 @@ export async function generateLanguagesChart(languages: GitHubLanguages) {
 					CONFIG.charts.languages.wrapperBorder +
 					CONFIG.charts.languages.offset +
 					CONFIG.charts.languages.legend.width,
+				LEGEND_STYLES: legendStyles,
+				LEGEND_TSPANS: legendTspans,
 			},
 		);
 	}
