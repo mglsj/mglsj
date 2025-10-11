@@ -72,13 +72,24 @@ export async function generateLanguagesChart(languages: GitHubLanguages) {
 			.map((_, i) => `.language${i + 1} { fill: ${legendColor[i] ?? ""}; }`)
 			.join("\n");
 
+		const legendXValue =
+			CONFIG.charts.languages.width +
+			CONFIG.charts.languages.wrapperBorder +
+			CONFIG.charts.languages.offset +
+			CONFIG.charts.languages.legend.margin.x;
+
+		const legendYValue =
+			CONFIG.charts.languages.wrapperBorder +
+			CONFIG.charts.languages.legend.margin.y;
+
 		const legendTspans = Array.from({ length: limit })
 			.map((_, i) => {
 				const name = languages[i]?.[0] ?? "";
 				if (i === 0) {
-					return `<tspan class="language${i + 1}" x="__LEGEND_X__" dy="__LEGEND_Y__">${name}</tspan>`;
+					return `<tspan class="language${i + 1}" x="${legendXValue}" dy="${legendYValue}">${name}</tspan>`;
 				}
-				return `<tspan class="language${i + 1}" x="__LEGEND_X__" dy="1.6em">${name}</tspan>`;
+
+				return `<tspan class="language${i + 1}" x="${legendXValue}" dy="1.6em">${name}</tspan>`;
 			})
 			.join("\n");
 
@@ -99,14 +110,8 @@ export async function generateLanguagesChart(languages: GitHubLanguages) {
 					CONFIG.charts.languages.width +
 					CONFIG.charts.languages.wrapperBorder +
 					CONFIG.charts.languages.offset,
-				LEGEND_X:
-					CONFIG.charts.languages.width +
-					CONFIG.charts.languages.wrapperBorder +
-					CONFIG.charts.languages.offset +
-					CONFIG.charts.languages.legend.margin.x,
-				LEGEND_Y:
-					CONFIG.charts.languages.wrapperBorder +
-					CONFIG.charts.languages.legend.margin.y,
+				LEGEND_X: legendXValue,
+				LEGEND_Y: legendYValue,
 				SEPARATOR_COLOR: theme.separator,
 				VIEW_BOX_HEIGHT:
 					CONFIG.charts.languages.height + CONFIG.charts.languages.offset * 2,
