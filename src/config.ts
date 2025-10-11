@@ -51,7 +51,7 @@ export const CONFIG = {
 		devicePixelRatio: 2,
 		languages: {
 			fileName: "languages",
-			height: 94,
+			height: 200,
 			legend: {
 				margin: {
 					x: 14,
