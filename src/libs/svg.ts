@@ -67,6 +67,22 @@ export async function generateLanguagesChart(languages: GitHubLanguages) {
 
 		const { data, legendColor } = await getLanguagesChartData(languages, theme);
 
+		const limit = Math.min(CONFIG.charts.languages.limit, languages.length);
+		const legendStyles = Array.from({ length: limit })
+			.map((_, i) => `.language${i + 1} { fill: ${legendColor[i] ?? ""}; }`)
+			.join("\n");
+
+		const legendTspans = Array.from({ length: limit })
+			.map((_, i) => {
+				const name = languages[i]?.[0] ?? "";
+				if (i === 0) {
+					return `<tspan class="language${i + 1}" x="__LEGEND_X__" dy="__LEGEND_Y__">${name}</tspan>`;
+				}
+				return `<tspan class="language${i + 1}" x="__LEGEND_X__" dy="1.6em">${name}</tspan>`;
+			})
+			.join("\n");
+
+
 		await compileTemplate(
 			`${CONFIG.charts.languages.fileName}.svg`,
 			`${CONFIG.charts.languages.fileName}-${currentTheme}.svg`,
@@ -79,16 +95,8 @@ export async function generateLanguagesChart(languages: GitHubLanguages) {
 				CHART_WIDTH:
 					CONFIG.charts.languages.width -
 					CONFIG.charts.languages.wrapperBorder * 2,
-				LANGUAGE_1: languages[0]?.[0] ?? "",
-				LANGUAGE_1_COLOR: legendColor[0] ?? "",
-				LANGUAGE_2: languages[1]?.[0] ?? "",
-				LANGUAGE_2_COLOR: legendColor[1] ?? "",
-				LANGUAGE_3: languages[2]?.[0] ?? "",
-				LANGUAGE_3_COLOR: legendColor[2] ?? "",
-				LANGUAGE_4: languages[3]?.[0] ?? "",
-				LANGUAGE_4_COLOR: legendColor[3] ?? "",
-				LANGUAGE_5: languages[4]?.[0] ?? "",
-				LANGUAGE_5_COLOR: legendColor[4] ?? "",
+				LEGEND_STYLES: legendStyles,
+				LEGEND_TSPANS: legendTspans,
 				LEGEND_SEPARATOR_X:
 					CONFIG.charts.languages.width +
 					CONFIG.charts.languages.wrapperBorder +

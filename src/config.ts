@@ -59,7 +59,7 @@ export const CONFIG = {
 				},
 				width: 128,
 			},
-			limit: 5,
+			limit: 10,
 			offset: 10,
 			width: 48,
 			wrapperBorder: 1,
