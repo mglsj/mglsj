@@ -1,30 +1,47 @@
-<h3 align="center">
+<h1 align="center">
   I'm Lakshyajeet Jalal
-</h3>
+</h1>
 
-<div>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
-    <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="224"
-    height="209" align="left" />
-  </picture>
+<img src="assets/banner.avif" width="100%"/>
 
-  I tell computers to do stuff.
-  <br/>
-  Sometimes they listen
-  <br/>
-  <br/>
-  #[PCMR](https://pcmasterrace.org/) #[OpenSource](https://en.wikipedia.org/wiki/Open_source)
-</div>
-<br/>
-<br/>
+<p align="left">
+  My girlfriend asked me to put this up.
+</p>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
   <img alt="mglsj's GitHub contributions" src="assets/stats-light.svg" />
 </picture>
 
-<picture align="center">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mglsj/mglsj/snake/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mglsj/mglsj/snake/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/mglsj/mglsj/snake/github-snake.svg" />
-</picture>
+<div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/languages-dark.svg">
+    <img alt="mglsj's most used languages" src="assets/languages-light.svg" width="224" height="209" align="left" />
+  </picture>
+
+Keep your bloated classes, your virtual tables,
+
+Your layers of nonsense and OOP fables.
+
+I don’t want your templates, your "modern" crusade,
+
+Just give me the bare iron the architects made.
+
+A pointer, a byte, an explicit free,
+
+No garbage collectors out-thinking me.
+
+If you dereference NULL, it crashes—you learn;
+
+The machine doesn't care if your feelings get burned.
+
+Eight-space indents, clear functions, good taste,
+
+Not twenty abstractions with cycles to waste.
+
+It’s lean, it is ruthless, it cuts to the bone—
+
+Write real C, or leave the damn kernel alone.
+
+</div>
+
