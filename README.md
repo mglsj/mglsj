@@ -4,9 +4,11 @@
 
 <img src="assets/banner.avif" width="100%"/>
 
-<p align="left">
+<p align="right">
   My girlfriend asked me to put this up.
 </p>
+
+# Some of my stats
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
