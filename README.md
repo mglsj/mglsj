@@ -1,6 +1,20 @@
-<h3 align="center">
+<h1 align="center">
   I'm Lakshyajeet Jalal
-</h3>
+</h1>
+
+<img width="100%" alt="github-snake" src="assets/banner.avif" />
+
+<p align="right">
+  My girlfriend made this and asked me to put this up
+</p>
+
+## Here are some of my stats
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
+  <img alt="mglsj's GitHub contributions" src="assets/stats-light.svg" />
+</picture>
+
 
 <div>
   <picture>
@@ -9,22 +23,15 @@
     height="209" align="left" />
   </picture>
 
-  I tell computers to do stuff.
+  I like c
   <br/>
-  Sometimes they listen
+  c is simple
   <br/>
+  c is elegant
   <br/>
-  #[PCMR](https://pcmasterrace.org/) #[OpenSource](https://en.wikipedia.org/wiki/Open_source)
+  c is beautiful.
+  <br/>
+  Rust is also good.
+  <br/>
 </div>
-<br/>
-<br/>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stats-dark.svg">
-  <img alt="mglsj's GitHub contributions" src="assets/stats-light.svg" />
-</picture>
 
-<picture align="center">
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/mglsj/mglsj/snake/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/mglsj/mglsj/snake/github-snake.svg" />
-  <img alt="github-snake" src="https://raw.githubusercontent.com/mglsj/mglsj/snake/github-snake.svg" />
-</picture>
